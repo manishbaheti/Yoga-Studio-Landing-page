@@ -40,7 +40,7 @@ const ProblemSolution: React.FC = () => {
                 <Flower className="text-gold-400" size={24} />
               </div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-                The Chakra Yoga Labs Difference
+                The Chakraa Yoga Labs Difference
               </h2>
               <p className="text-teal-100 max-w-2xl mx-auto">
                 We offer more than just stretching. Our 45-minute sessions are specifically designed to be restorative, focusing on the link between mind and body.

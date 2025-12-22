@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Instagram, Facebook } from 'lucide-react';
+import { Mail, Phone, Instagram, Facebook, MessageSquare } from 'lucide-react';
 import { BRAND } from '../constants';
 
 const Contact: React.FC = () => {
@@ -11,6 +11,9 @@ const Contact: React.FC = () => {
     setSubmitted(true);
     // In a real app, this would send data to backend/email service
   };
+
+  const whatsappNumber = "61400000000"; // Placeholder: format should be country code + number without '+'
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Nidhi, I'm interested in Chakraa Yoga Labs!")}`;
 
   return (
     <footer id="contact" className="bg-stone-900 text-stone-300 py-20">
@@ -28,31 +31,47 @@ const Contact: React.FC = () => {
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-teal-500 mr-4">
+              <div className="flex items-center group cursor-pointer">
+                <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-teal-500 mr-4 group-hover:bg-teal-500 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
-                <span>{BRAND.email}</span>
+                <a href={`mailto:${BRAND.email}`} className="hover:text-white transition-colors">{BRAND.email}</a>
               </div>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-teal-500 mr-4">
+              
+              <div className="flex items-center group">
+                <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-teal-500 mr-4 group-hover:bg-teal-500 group-hover:text-white transition-all">
                   <Phone size={20} />
                 </div>
                 <span>04XX XXX XXX (Inquire)</span>
               </div>
+
+              <div className="flex items-center group">
+                <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-green-500 mr-4 group-hover:bg-green-500 group-hover:text-white transition-all">
+                  <MessageSquare size={20} />
+                </div>
+                <a 
+                  href={whatsappLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors flex flex-col"
+                >
+                  <span className="font-bold text-white">Message on WhatsApp</span>
+                  <span className="text-sm text-stone-500 group-hover:text-stone-300">Instant Chat with Nidhi</span>
+                </a>
+              </div>
             </div>
 
             <div className="mt-12">
-              <h4 className="text-white font-bold mb-4">Follow us</h4>
+              <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-widest">Follow our journey</h4>
               <div className="flex space-x-4">
-                <a href="#" className="text-stone-400 hover:text-white transition-colors"><Instagram /></a>
-                <a href="#" className="text-stone-400 hover:text-white transition-colors"><Facebook /></a>
+                <a href="#" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-all"><Instagram size={20} /></a>
+                <a href="#" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-all"><Facebook size={20} /></a>
               </div>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-white rounded-2xl p-8 text-stone-800">
+          <div className="bg-white rounded-2xl p-8 text-stone-800 shadow-2xl">
             {submitted ? (
               <div className="h-full flex flex-col justify-center items-center text-center py-10">
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
@@ -107,7 +126,7 @@ const Contact: React.FC = () => {
 
                 <button 
                   type="submit"
-                  className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2"
+                  className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
                   Send Inquiry
                 </button>

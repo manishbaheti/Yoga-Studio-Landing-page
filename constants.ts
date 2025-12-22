@@ -1,7 +1,7 @@
 import { Clock, Calendar, MapPin, Heart, Sun, Activity } from 'lucide-react';
 
 export const BRAND = {
-  name: "Chakra Yoga Labs",
+  name: "Chakraa Yoga Labs",
   tagline: "Find Your Balance and Flexibility",
   location: "The Karate School, Level 1, 72/76 Portman St, Oakleigh VIC 3166",
   email: "hello@chakrayogalabs.com.au", // Placeholder based on domain in banner
