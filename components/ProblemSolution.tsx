@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { PAIN_POINTS, SOLUTIONS } from '../constants';
 import { Flower } from 'lucide-react';
@@ -10,10 +11,10 @@ const ProblemSolution: React.FC = () => {
         {/* Pain Points */}
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-teal-900 mb-4">
-            Are You Feeling This Way?
+            Feeling the Weight of the Day?
           </h2>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            We understand the juggle. If you’re a woman in your late 30s to 50s, you’re likely facing the pressures of modern life.
+            We understand the daily hustle. Whether you're navigating a high-pressure career, busy family life, or the physical toll of modern living, stress doesn't discriminate.
           </p>
         </div>
 
@@ -40,10 +41,10 @@ const ProblemSolution: React.FC = () => {
                 <Flower className="text-gold-400" size={24} />
               </div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-                The Chakraa Yoga Labs Difference
+                The Chakraa Yoga Lab Difference
               </h2>
               <p className="text-teal-100 max-w-2xl mx-auto">
-                We offer more than just stretching. Our 45-minute sessions are specifically designed to be restorative, focusing on the link between mind and body.
+                Our 45-minute sessions are designed to be restorative, focusing on the link between mind and body for every student, regardless of gender or experience level.
               </p>
             </div>
 

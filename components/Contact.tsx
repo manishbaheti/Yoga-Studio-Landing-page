@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Phone, Instagram, Facebook, MessageSquare } from 'lucide-react';
 import { BRAND } from '../constants';
@@ -6,26 +7,42 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', interest: 'Flex & Flow' });
   const [submitted, setSubmitted] = useState(false);
 
+  const fullPhoneNumber = "+61450154032";
+  const whatsappNumberOnlyDigits = fullPhoneNumber.replace('+', '');
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Construct the WhatsApp message with form data
+    const message = `Hi Nidhi, I'm ${formData.name}. I'm interested in the ${formData.interest} plan. My email is ${formData.email}. (Sent from Chakraa Yoga Lab website)`;
+    const whatsappUrl = `https://wa.me/${whatsappNumberOnlyDigits}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+    
     setSubmitted(true);
-    // In a real app, this would send data to backend/email service
   };
 
-  const whatsappNumber = "61400000000"; // Placeholder: format should be country code + number without '+'
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hi Nidhi, I'm interested in Chakraa Yoga Labs!")}`;
+  const whatsappLink = `https://wa.me/${whatsappNumberOnlyDigits}?text=${encodeURIComponent("Hi Nidhi, I'm interested in Chakraa Yoga Lab!")}`;
 
   return (
     <footer id="contact" className="bg-stone-900 text-stone-300 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           
           {/* Contact Info */}
           <div>
-            <h2 className="font-serif text-3xl font-bold text-white mb-6">
+            <div className="flex items-center space-x-4 mb-8">
+              <img src="https://storage.googleapis.com/chakraayogalab/Logo.png" alt="" className="w-16 h-16 object-contain" />
+              <h2 className="font-serif text-3xl font-bold text-white">
+                {BRAND.name}
+              </h2>
+            </div>
+            
+            <h3 className="text-xl text-stone-100 mb-6 font-medium">
               Ready to feel calmer, stronger, and more flexible?
-            </h2>
+            </h3>
             <p className="mb-8 text-stone-400">
               Spots for the February 2026 launch are limited. Fill out the form to register your interest and claim your Founding Member discount.
             </p>
@@ -42,7 +59,7 @@ const Contact: React.FC = () => {
                 <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-teal-500 mr-4 group-hover:bg-teal-500 group-hover:text-white transition-all">
                   <Phone size={20} />
                 </div>
-                <span>04XX XXX XXX (Inquire)</span>
+                <a href={`tel:${fullPhoneNumber}`} className="hover:text-white transition-colors">0450 154 032</a>
               </div>
 
               <div className="flex items-center group">
@@ -64,8 +81,8 @@ const Contact: React.FC = () => {
             <div className="mt-12">
               <h4 className="text-white font-bold mb-4 uppercase text-xs tracking-widest">Follow our journey</h4>
               <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-all"><Instagram size={20} /></a>
-                <a href="#" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-all"><Facebook size={20} /></a>
+                <a href="https://www.instagram.com/chakraayogalab/" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-all"><Instagram size={20} /></a>
+                <a href="https://www.facebook.com/search/top?q=chakraa%20yoga%20lab" className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-stone-400 hover:text-white hover:bg-stone-700 transition-all"><Facebook size={20} /></a>
               </div>
             </div>
           </div>
@@ -77,12 +94,18 @@ const Contact: React.FC = () => {
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
                   <CheckIcon />
                 </div>
-                <h3 className="text-2xl font-bold text-teal-900 mb-2">Thank You!</h3>
-                <p className="text-stone-600">We've received your inquiry. Nidhi will be in touch shortly to confirm your spot.</p>
+                <h3 className="text-2xl font-bold text-teal-900 mb-2">Message Sent!</h3>
+                <p className="text-stone-600">Your WhatsApp chat should have opened with your inquiry details. Nidhi will get back to you shortly.</p>
+                <button 
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6 text-teal-700 font-bold hover:underline"
+                >
+                  Send another message
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <h3 className="text-xl font-bold text-teal-900 mb-4">Secure Your Spot</h3>
+                <h3 className="text-xl font-bold text-teal-900 mb-4">Inquire via WhatsApp</h3>
                 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-1">Full Name</label>
@@ -128,10 +151,10 @@ const Contact: React.FC = () => {
                   type="submit"
                   className="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-3 px-4 rounded-lg transition-colors mt-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 >
-                  Send Inquiry
+                  Send WhatsApp Inquiry
                 </button>
                 <p className="text-xs text-stone-500 text-center mt-4">
-                  *No payment required today. We will contact you to finalize enrollment.
+                  *This will open WhatsApp with your pre-filled message.
                 </p>
               </form>
             )}

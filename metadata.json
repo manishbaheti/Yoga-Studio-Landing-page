@@ -1,5 +1,6 @@
 {
-  "name": "Chakraa Yoga Labs Landing Page",
-  "description": "A wellness-themed landing page for the Chakraa Yoga Labs studio launch, featuring schedule, pricing, and instructor details.",
-  "requestFramePermissions": []
+  "name": "Chakraa Yoga Lab Landing Page",
+  "description": "A wellness-themed landing page for the Chakraa Yoga Lab studio launch, featuring schedule, pricing, and instructor details.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }

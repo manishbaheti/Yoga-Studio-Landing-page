@@ -8,12 +8,12 @@ const Schedule: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-12">
-          <span className="text-teal-700 font-semibold tracking-wider uppercase text-sm">Consistent Routine</span>
+          <span className="text-teal-700 font-semibold tracking-wider uppercase text-sm">Our Timetable</span>
           <h2 className="font-serif text-4xl font-bold text-stone-800 mt-2 mb-4">
-            Start Your Journey: Feb 1st, 2026
+            Join a Class at Our Oakleigh Studio
           </h2>
           <p className="text-stone-600">
-            Two convenient times per week to help you commit to yourself consistently.
+            Thoughtfully scheduled sessions for our local community in Oakleigh, Huntingdale, and surrounding suburbs.
           </p>
         </div>
 
@@ -42,9 +42,9 @@ const Schedule: React.FC = () => {
               <MapPin className="text-gold-500 w-6 h-6" />
             </div>
             <div>
-              <h3 className="font-serif text-xl font-bold text-stone-800">Location</h3>
+              <h3 className="font-serif text-xl font-bold text-stone-800">Portman St Location</h3>
               <p className="text-stone-600 mt-1 max-w-md">{BRAND.location}</p>
-              <p className="text-sm text-stone-400 mt-2 italic">Easy access near Oakleigh Train Station</p>
+              <p className="text-sm text-stone-400 mt-2 italic">A convenient hub for yoga near Oakleigh Station and Huntingdale</p>
             </div>
           </div>
           <a 
@@ -53,7 +53,7 @@ const Schedule: React.FC = () => {
             rel="noopener noreferrer"
             className="text-teal-700 font-semibold hover:text-teal-800 underline decoration-2 underline-offset-4"
           >
-            Get Directions
+            View on Google Maps
           </a>
         </div>
 

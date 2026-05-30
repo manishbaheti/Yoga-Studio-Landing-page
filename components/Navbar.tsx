@@ -18,8 +18,13 @@ const Navbar: React.FC = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <span className={`font-serif text-2xl font-bold tracking-wide ${isScrolled ? 'text-teal-800' : 'text-teal-900'}`}>
+          <div className="flex-shrink-0 flex items-center space-x-3 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+            <img 
+              src="https://storage.googleapis.com/chakraayogalab/Logo.png" 
+              alt={`${BRAND.name} Logo`} 
+              className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
+            />
+            <span className={`font-serif text-xl md:text-2xl font-bold tracking-wide transition-colors ${isScrolled ? 'text-teal-800' : 'text-teal-900'}`}>
               {BRAND.name}
             </span>
           </div>
@@ -36,7 +41,7 @@ const Navbar: React.FC = () => {
             ))}
             <a
               href="#pricing"
-              className="bg-teal-700 hover:bg-teal-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors"
+              className="bg-teal-700 hover:bg-teal-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-colors shadow-sm"
             >
               Book Now
             </a>
@@ -55,7 +60,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-lg absolute w-full">
+        <div className="md:hidden bg-white shadow-lg absolute w-full animate-fade-in">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {NAVIGATION.map((item) => (
               <a

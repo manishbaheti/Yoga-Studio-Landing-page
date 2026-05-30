@@ -12,7 +12,7 @@ const Pricing: React.FC = () => {
             3-Month Wellness Commitment
           </h2>
           <p className="text-stone-600 mb-6">
-            Invest in your long-term health. Plans run from February 1st to April 30th.
+            Invest in your long-term health. Plans run starting February 1st.
           </p>
           <div className="inline-block bg-gold-400 text-white px-6 py-2 rounded-full font-bold shadow-md animate-pulse">
             Founding Member Offer: First 10 Signups get 10% OFF!
@@ -59,7 +59,7 @@ const Pricing: React.FC = () => {
                 </div>
                 <div className="flex items-start">
                   <Check className="w-5 h-5 text-teal-600 mr-2 flex-shrink-0 mt-0.5" />
-                  <p className="text-stone-600 text-sm">Mats & Props Provided</p>
+                  <p className="text-stone-600 text-sm">Props Provided</p>
                 </div>
               </div>
 

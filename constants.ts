@@ -1,12 +1,13 @@
 import { Clock, Calendar, MapPin, Heart, Sun, Activity } from 'lucide-react';
 
 export const BRAND = {
-  name: "Chakraa Yoga Labs",
-  tagline: "Find Your Balance and Flexibility",
+  name: "Chakraa Yoga Lab",
+  tagline: "Yoga for Flexibility, Balance & Mental Wellbeing",
   location: "The Karate School, Level 1, 72/76 Portman St, Oakleigh VIC 3166",
-  email: "hello@chakrayogalabs.com.au", // Placeholder based on domain in banner
+  email: "nidhibaheti@yahoo.co.in",
   launchDate: "February 1st, 2026",
-  instructor: "Nidhi Maheshwari"
+  instructor: "Nidhi Maheshwari",
+  logo: "https://storage.googleapis.com/chakraayogalab/logo.png" // Path to the uploaded gold tree logo
 };
 
 export const NAVIGATION = [
@@ -19,33 +20,33 @@ export const NAVIGATION = [
 export const PAIN_POINTS = [
   {
     icon: Activity,
-    title: "High Mental Stress",
-    description: "The mental load never stops, leaving you feeling depleted and anxious."
+    title: "Mental Health & Reset",
+    description: "Modern life is demanding. Reclaim your focus with specialized yoga designed for a complete mental wellness reset."
   },
   {
     icon: Activity,
-    title: "Stiffness & Discomfort",
-    description: "Years of sitting mean your body feels rigid, limiting daily movement."
+    title: "Flexibility & Movement",
+    description: "Ease persistent stiffness and improve your range of motion with flows that prioritize functional flexibility and balance."
   },
   {
     icon: Sun,
-    title: "Low Energy",
-    description: "You need an activity that restores you, rather than drains you."
+    title: "Breathwork & Energy",
+    description: "Learn essential yoga breathwork techniques that restore your natural energy levels and calm the nervous system."
   }
 ];
 
 export const SOLUTIONS = [
   {
-    title: "Specialized Focus",
-    description: "Movements tailored to gently improve flexibility and functional body movement in mature bodies."
+    title: "Beginner Friendly Environment",
+    description: "Perfect for those exploring yoga for the first time. We provide a supportive space where every movement is tailored to you."
   },
   {
-    title: "Anxiety Reduction",
-    description: "Incorporating breathwork and mindfulness proven to significantly lower mental stress."
+    title: "Tailored 1-on-1 Sessions",
+    description: "Looking for personalized attention? We offer private tailored yoga sessions to help you reach your specific health and mobility goals."
   },
   {
-    title: "Convenient Location",
-    description: "Held at The Karate School near Oakleigh Station for easy access."
+    title: "Convenient Local Studio",
+    description: "Located on Portman St, we are the go-to studio for the Oakleigh and Huntingdale communities, just steps from the station."
   }
 ];
 
@@ -53,15 +54,15 @@ export const SCHEDULE = [
   {
     day: "Wednesday",
     time: "10:00 AM – 11:00 AM",
-    name: "Weekly Wellness",
-    focus: "Gentle Flow & Deep Flexibility",
+    name: "Mid-Week Wellness",
+    focus: "Gentle Flow & Breathwork",
     icon: Sun
   },
   {
     day: "Sunday",
     time: "9:00 AM – 10:00 AM",
     name: "Weekend Reset",
-    focus: "Stress Reduction & Core Movement",
+    focus: "Flexibility & Balance",
     icon: Calendar
   }
 ];
@@ -71,9 +72,9 @@ export const PLANS = [
     name: "Weekly Calm",
     frequency: "1 Class / Week",
     options: "Wednesday OR Sunday",
-    price: "$295",
-    period: "for 3 months",
-    perClass: "~$24.60 per class",
+    price: "$165",
+    period: "for 1 term",
+    perClass: "~$18.33 per class",
     bestFor: "Managing stress with a non-intimidating commitment.",
     isPrimary: false
   },
@@ -81,9 +82,9 @@ export const PLANS = [
     name: "Flex & Flow",
     frequency: "2 Classes / Week",
     options: "Wednesday AND Sunday",
-    price: "$495",
-    period: "for 3 months",
-    perClass: "~$20.60 per class",
+    price: "$295",
+    period: "for 1 term",
+    perClass: "~$16.38 per class",
     bestFor: "Maximum flexibility and fast-tracking stress relief.",
     isPrimary: true,
     tag: "Best Value"
