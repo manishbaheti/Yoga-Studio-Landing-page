@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { BRAND, NAVIGATION } from '../constants';
+const logoImg = BRAND.logo;
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,10 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center space-x-3 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <img 
-              src="https://storage.googleapis.com/chakraayogalab/Logo.png" 
+              src={logoImg} 
               alt={`${BRAND.name} Logo`} 
               className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
+              referrerPolicy="no-referrer"
             />
             <span className={`font-serif text-xl md:text-2xl font-bold tracking-wide transition-colors ${isScrolled ? 'text-teal-800' : 'text-teal-900'}`}>
               {BRAND.name}

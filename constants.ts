@@ -7,7 +7,7 @@ export const BRAND = {
   email: "nidhibaheti@yahoo.co.in",
   launchDate: "February 1st, 2026",
   instructor: "Nidhi Maheshwari",
-  logo: "https://storage.googleapis.com/chakraayogalab/logo.png" // Path to the uploaded gold tree logo
+  logo: "https://lh3.googleusercontent.com/d/1VUznRy2HPGyfmrvag_PZxK1iqs4FCLRD" // Path to the uploaded gold tree logo
 };
 
 export const NAVIGATION = [

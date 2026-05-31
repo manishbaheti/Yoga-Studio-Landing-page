@@ -2,6 +2,8 @@ import React from 'react';
 import { BRAND } from '../constants';
 
 const About: React.FC = () => {
+  const nidhiPhotoImg = "https://lh3.googleusercontent.com/d/1pOjiij5_h9TBjEOUaK0BtjPtjnRyBNSc";
+
   return (
     <section id="about" className="py-24 bg-stone-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,9 +16,10 @@ const About: React.FC = () => {
             
             <div className="relative z-10 aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-[12px] border-white transform -rotate-2 hover:rotate-0 transition-all duration-500 ease-out">
               <img 
-                src="https://storage.googleapis.com/chakraayogalab/Nidhi%20photo%201.bmp" 
+                src={nidhiPhotoImg} 
                 alt="Nidhi Maheshwari - Yoga Teacher in Oakleigh" 
                 className="w-full h-full object-cover object-center scale-105"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>

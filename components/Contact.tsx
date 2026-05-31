@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, Instagram, Facebook, MessageSquare } from 'lucide-react';
 import { BRAND } from '../constants';
+const logoImg = BRAND.logo;
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', interest: 'Flex & Flow' });
@@ -34,7 +35,7 @@ const Contact: React.FC = () => {
           {/* Contact Info */}
           <div>
             <div className="flex items-center space-x-4 mb-8">
-              <img src="https://storage.googleapis.com/chakraayogalab/Logo.png" alt="" className="w-16 h-16 object-contain" />
+              <img src={logoImg} alt="" className="w-16 h-16 object-contain" referrerPolicy="no-referrer" />
               <h2 className="font-serif text-3xl font-bold text-white">
                 {BRAND.name}
               </h2>
