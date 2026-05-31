@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
 
           
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-teal-900 leading-tight mb-6">
-            <span className="text-gold-500"> Yoga For Every One</span>
+            <span className="text-gold-500"> Yoga For Every Ones</span>
           </h1>
           
           <p className="text-lg md:text-xl text-stone-700 mb-8 leading-relaxed max-w-xl">
