@@ -68,6 +68,16 @@ export const SCHEDULE = [
 
 export const PLANS = [
   {
+    name: "Casual Session",
+    frequency: "1 Class",
+    options: "Wednesday OR Sunday",
+    price: "$20",
+    period: "per class",
+    perClass: "Single class attendance",
+    bestFor: "Flexible drop-in class option with zero commitment.",
+    isPrimary: false
+  },
+  {
     name: "Weekly Calm",
     frequency: "1 Class / Week",
     options: "Wednesday OR Sunday",

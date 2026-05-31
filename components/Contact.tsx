@@ -144,6 +144,7 @@ const Contact: React.FC = () => {
                   >
                     <option value="Flex & Flow">Flex & Flow (2x/Week) - Best Value</option>
                     <option value="Weekly Calm">Weekly Calm (1x/Week)</option>
+                    <option value="Casual Session">Casual Session ($20 / Class)</option>
                     <option value="Just Inquiring">Just Inquiring</option>
                   </select>
                 </div>
