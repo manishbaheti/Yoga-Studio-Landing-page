@@ -5,7 +5,6 @@ export const BRAND = {
   tagline: "Yoga for Flexibility, Balance & Mental Wellbeing",
   location: "The Karate School, Level 1, 72/76 Portman St, Oakleigh VIC 3166",
   email: "nidhibaheti@yahoo.co.in",
-  launchDate: "February 1st, 2026",
   instructor: "Nidhi Maheshwari",
   logo: "https://lh3.googleusercontent.com/d/1VUznRy2HPGyfmrvag_PZxK1iqs4FCLRD" // Path to the uploaded gold tree logo
 };

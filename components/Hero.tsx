@@ -46,7 +46,7 @@ const Hero: React.FC = () => {
           <div className="mt-8 flex items-center text-sm text-stone-600">
             <span className="flex items-center">
               <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Inclusive Yoga Studio Oakleigh: Limited Founding Spaces
+              Inclusive Yoga Studio Oakleigh: Beginners Welcome
             </span>
           </div>
         </div>

@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
               Ready to feel calmer, stronger, and more flexible?
             </h3>
             <p className="mb-8 text-stone-400">
-              Spots for the February 2026 launch are limited. Fill out the form to register your interest and claim your Founding Member discount.
+              Spots are limited. Fill out the form to register your interest and secure your place.
             </p>
 
             <div className="space-y-6">

@@ -12,11 +12,8 @@ const Pricing: React.FC = () => {
             3-Month Wellness Commitment
           </h2>
           <p className="text-stone-600 mb-6">
-            Invest in your long-term health. Plans run starting February 1st.
+            Invest in your long-term health with our tailored commitment plans.
           </p>
-          <div className="inline-block bg-gold-400 text-white px-6 py-2 rounded-full font-bold shadow-md animate-pulse">
-            Founding Member Offer: First 10 Signups get 10% OFF!
-          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -78,7 +75,7 @@ const Pricing: React.FC = () => {
         </div>
         
         <p className="text-center text-stone-400 text-sm mt-8">
-          Launch Special: Secure your spot now for February. Limited spaces available per class.
+          Secure your spot now. Limited spaces available per class.
         </p>
       </div>
     </section>
