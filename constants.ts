@@ -52,7 +52,7 @@ export const SOLUTIONS = [
 export const SCHEDULE = [
   {
     day: "Wednesday",
-    time: "10:00 AM – 11:00 AM",
+    time: "9:00 AM – 10:00 AM",
     name: "Mid-Week Wellness",
     focus: "Gentle Flow & Breathwork",
     icon: Sun
