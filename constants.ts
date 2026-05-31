@@ -10,6 +10,7 @@ export const BRAND = {
 };
 
 export const NAVIGATION = [
+  { name: 'International Yoga Day Event', href: '#yogaday' },
   { name: 'Schedule', href: '#schedule' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'About Nidhi', href: '#about' },
