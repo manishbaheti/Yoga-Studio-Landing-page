@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
-import YogaDay from './components/YogaDay';
 import Schedule from './components/Schedule';
 import Pricing from './components/Pricing';
 import About from './components/About';
@@ -15,7 +14,6 @@ function App() {
       <main>
         <Hero />
         <ProblemSolution />
-        <YogaDay />
         <Schedule />
         <Pricing />
         <About />

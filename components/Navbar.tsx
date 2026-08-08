@@ -36,11 +36,7 @@ const Navbar: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
-                  item.href === '#yogaday' 
-                    ? 'text-gold-500 font-semibold hover:text-gold-400' 
-                    : `hover:text-gold-500 ${isScrolled ? 'text-stone-600' : 'text-stone-800'}`
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-gold-500 ${isScrolled ? 'text-stone-600' : 'text-stone-800'}`}
               >
                 {item.name}
               </a>
@@ -73,11 +69,7 @@ const Navbar: React.FC = () => {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  item.href === '#yogaday'
-                    ? 'text-gold-500 font-semibold hover:text-gold-400 hover:bg-stone-50'
-                    : 'text-stone-700 hover:text-teal-700 hover:bg-stone-50'
-                }`}
+                className="block px-3 py-2 rounded-md text-base font-medium text-stone-700 hover:text-teal-700 hover:bg-stone-50"
               >
                 {item.name}
               </a>

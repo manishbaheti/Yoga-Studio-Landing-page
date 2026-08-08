@@ -10,7 +10,6 @@ export const BRAND = {
 };
 
 export const NAVIGATION = [
-  { name: 'International Yoga Day Event', href: '#yogaday' },
   { name: 'Schedule', href: '#schedule' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'About Nidhi', href: '#about' },
@@ -60,7 +59,7 @@ export const SCHEDULE = [
   },
   {
     day: "Sunday",
-    time: "9:00 AM – 10:00 AM",
+    time: "11:30 AM – 12:30 PM",
     name: "Weekend Reset",
     focus: "Flexibility & Balance",
     icon: Calendar
