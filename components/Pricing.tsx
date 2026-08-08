@@ -74,9 +74,31 @@ const Pricing: React.FC = () => {
           ))}
         </div>
         
-        <p className="text-center text-stone-400 text-sm mt-8">
+        <p className="text-center text-stone-400 text-sm mt-8 mb-12">
           Secure your spot now. Limited spaces available per class.
         </p>
+
+        {/* Business Yoga Callout */}
+        <div className="bg-gradient-to-r from-teal-900 to-stone-900 rounded-3xl p-8 md:p-10 text-white max-w-5xl mx-auto border border-teal-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 text-center md:text-left">
+            <span className="bg-gold-500/20 text-gold-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block">
+              for Business Clients
+            </span>
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-white">
+              Looking for yoga and wellness for your business?
+            </h3>
+            <p className="text-stone-300 text-sm md:text-base max-w-2xl font-light">
+              We offer tailored <strong>sessions</strong> for businesses — including <strong>Onsite Yoga at your office</strong> and <strong>Studio Block Bookings in Oakleigh</strong> with dedicated business benefits.
+            </p>
+          </div>
+
+          <a 
+            href="#business"
+            className="bg-gold-500 hover:bg-gold-400 text-stone-950 font-bold px-6 py-3.5 rounded-full transition-all text-sm whitespace-nowrap shadow-md hover:shadow-lg flex-shrink-0"
+          >
+            Explore Business Packages &rarr;
+          </a>
+        </div>
       </div>
     </section>
   );

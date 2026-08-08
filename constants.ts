@@ -13,6 +13,7 @@ export const NAVIGATION = [
   { name: 'Schedule', href: '#schedule' },
   { name: 'Pricing', href: '#pricing' },
   { name: 'About Nidhi', href: '#about' },
+  { name: 'Yoga for businesses', href: '#business' },
   { name: 'Contact', href: '#contact' },
 ];
 
