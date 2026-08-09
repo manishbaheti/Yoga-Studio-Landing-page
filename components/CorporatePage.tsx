@@ -19,6 +19,7 @@ import {
   Send
 } from 'lucide-react';
 import { BRAND } from '../constants';
+import corporateBgImage from '../src/assets/images/corporate_yoga_bg_1786248850869.jpg';
 
 const logoImg = BRAND.logo;
 
@@ -101,6 +102,17 @@ const CorporatePage: React.FC<CorporatePageProps> = ({ onBackToHome }) => {
 
       {/* Hero Header */}
       <section className="bg-gradient-to-b from-teal-950 via-teal-900 to-stone-900 text-white py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Faint Background Image */}
+        <div className="absolute inset-0 z-0 opacity-20 pointer-events-none mix-blend-luminosity overflow-hidden">
+          <img 
+            src={corporateBgImage} 
+            alt="Corporate Yoga Background" 
+            className="w-full h-full object-cover object-center scale-105"
+            referrerPolicy="no-referrer"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-teal-950/70 via-teal-900/60 to-stone-900/80 pointer-events-none"></div>
+
         {/* Background glow styling */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-teal-600/20 rounded-full blur-3xl pointer-events-none"></div>
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>

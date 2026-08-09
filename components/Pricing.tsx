@@ -1,6 +1,7 @@
 import React from 'react';
 import { PLANS } from '../constants';
 import { Check } from 'lucide-react';
+import corporateBgImage from '../src/assets/images/corporate_yoga_bg_1786248850869.jpg';
 
 const Pricing: React.FC = () => {
   return (
@@ -79,8 +80,17 @@ const Pricing: React.FC = () => {
         </p>
 
         {/* Business Yoga Callout */}
-        <div className="bg-gradient-to-r from-teal-900 to-stone-900 rounded-3xl p-8 md:p-10 text-white max-w-5xl mx-auto border border-teal-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-2 text-center md:text-left">
+        <div className="relative overflow-hidden bg-gradient-to-r from-teal-900 to-stone-900 rounded-3xl p-8 md:p-10 text-white max-w-5xl mx-auto border border-teal-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Faint Background Image */}
+          <div className="absolute inset-0 z-0 opacity-15 pointer-events-none mix-blend-overlay">
+            <img 
+              src={corporateBgImage} 
+              alt="Corporate Yoga" 
+              className="w-full h-full object-cover object-center" 
+              referrerPolicy="no-referrer"
+            />
+          </div>
+          <div className="relative z-10 space-y-2 text-center md:text-left">
             <span className="bg-gold-500/20 text-gold-400 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full inline-block">
               for Business Clients
             </span>
@@ -94,7 +104,7 @@ const Pricing: React.FC = () => {
 
           <a 
             href="#business"
-            className="bg-gold-500 hover:bg-gold-400 text-stone-950 font-bold px-6 py-3.5 rounded-full transition-all text-sm whitespace-nowrap shadow-md hover:shadow-lg flex-shrink-0"
+            className="relative z-10 bg-gold-500 hover:bg-gold-400 text-stone-950 font-bold px-6 py-3.5 rounded-full transition-all text-sm whitespace-nowrap shadow-md hover:shadow-lg flex-shrink-0"
           >
             Explore Business Packages &rarr;
           </a>
