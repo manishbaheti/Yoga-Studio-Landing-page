@@ -86,13 +86,17 @@ const CorporatePage: React.FC<CorporatePageProps> = ({ onBackToHome }) => {
       {/* Top Banner / Navigation Bar for Business Page */}
       <div className="bg-teal-900 text-white py-4 px-4 sm:px-8 border-b border-teal-800 sticky top-16 z-40 shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <button 
-            onClick={onBackToHome}
+          <a 
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              onBackToHome();
+            }}
             className="flex items-center space-x-2 text-teal-200 hover:text-white transition-colors text-sm font-medium"
           >
             <ArrowLeft size={18} />
             <span>Back to Individual Classes</span>
-          </button>
+          </a>
           <div className="flex items-center space-x-2 bg-teal-800/80 px-3 py-1 rounded-full text-xs text-gold-400 font-semibold tracking-wider uppercase">
             <Building2 size={14} />
             <span>Business Wellness Portal</span>

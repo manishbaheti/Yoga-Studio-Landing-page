@@ -31,7 +31,15 @@ const Navbar: React.FC<NavbarProps> = ({ isCorporateView = false }) => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || isCorporateView ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 flex items-center space-x-3 group cursor-pointer" onClick={handleLogoClick}>
+          <a 
+            href="/" 
+            className="flex-shrink-0 flex items-center space-x-3 group cursor-pointer" 
+            onClick={(e) => {
+              e.preventDefault();
+              handleLogoClick();
+            }}
+            aria-label={`${BRAND.name} Home`}
+          >
             <img 
               src={logoImg} 
               alt={`${BRAND.name} Logo`} 
@@ -41,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ isCorporateView = false }) => {
             <span className={`font-serif text-xl md:text-2xl font-bold tracking-wide transition-colors ${isScrolled || isCorporateView ? 'text-teal-800' : 'text-teal-900'}`}>
               {BRAND.name}
             </span>
-          </div>
+          </a>
           
           <div className="hidden md:flex items-center space-x-8 font-sans">
             {NAVIGATION.map((item) => (
