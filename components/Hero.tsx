@@ -18,9 +18,14 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-2xl">
 
-          
+          <div className="inline-flex items-center space-x-2 bg-teal-800/10 border border-teal-800/20 px-3.5 py-1.5 rounded-full text-teal-800 text-xs font-bold uppercase tracking-wider mb-4">
+            <span>Oakleigh &amp; Huntingdale Studio</span>
+          </div>
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-teal-900 leading-tight mb-6">
-            <span className="text-gold-500"> Yoga For Everybody</span>
+            <span className="text-gold-500">Yoga For Everybody</span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl text-teal-800 font-serif font-normal mt-2">
+              Best Yoga Classes in Oakleigh
+            </span>
           </h1>
           
           <p className="text-lg md:text-xl text-stone-700 mb-8 leading-relaxed max-w-xl">
