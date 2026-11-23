@@ -1,6 +1,6 @@
 import React from 'react';
-import { SCHEDULE, BRAND } from '../constants';
-import { MapPin, Clock } from 'lucide-react';
+import { BRAND } from '../constants';
+import { MapPin, Calendar } from 'lucide-react';
 
 const Schedule: React.FC = () => {
   return (
@@ -17,26 +17,32 @@ const Schedule: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {SCHEDULE.map((session, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-teal-600 flex flex-col md:flex-row items-start md:items-center gap-6 group hover:shadow-lg transition-all">
-              <div className="bg-teal-50 p-4 rounded-full group-hover:bg-teal-100 transition-colors">
-                <session.icon className="text-teal-700 w-8 h-8" />
-              </div>
-              <div>
-                <h3 className="font-serif text-2xl font-bold text-stone-800">{session.day}s</h3>
-                <div className="flex items-center text-teal-700 font-medium mt-1 mb-2">
-                  <Clock size={16} className="mr-2" />
-                  {session.time}
-                </div>
-                <h4 className="font-bold text-stone-700">{session.name}</h4>
-                <p className="text-stone-500 text-sm mt-1">{session.focus}</p>
-              </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white p-8 md:p-10 rounded-2xl shadow-sm border-l-4 border-teal-600 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+            <div className="bg-teal-50 p-4 rounded-full flex-shrink-0">
+              <Calendar className="text-teal-700 w-8 h-8" />
             </div>
-          ))}
+            <div className="flex-grow">
+              <span className="inline-block text-xs font-bold uppercase tracking-wider text-gold-500 mb-1">
+                Class Schedule Update
+              </span>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold text-stone-800">
+                We are taking a break and will commence regular classes from 1st Feb 2027
+              </h3>
+              <p className="text-stone-600 mt-2">
+                Thank you for practicing with us. Register your interest below to stay updated on our upcoming 2027 term timetable.
+              </p>
+            </div>
+            <a
+              href="#contact"
+              className="flex-shrink-0 bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full text-sm font-medium transition-colors shadow-sm"
+            >
+              Register Interest
+            </a>
+          </div>
         </div>
 
-        <div className="mt-16 bg-white p-8 rounded-2xl shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 bg-white p-8 rounded-2xl shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-start gap-4">
             <div className="bg-gold-500/10 p-3 rounded-full">
               <MapPin className="text-gold-500 w-6 h-6" />
